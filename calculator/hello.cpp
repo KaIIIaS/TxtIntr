@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 void printUsage() {
     std::cout << "Использование: calculator -o операция операнд1 операнд2 ..." << std::endl;
