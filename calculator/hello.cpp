@@ -5,9 +5,9 @@
 void printUsage() {
     std::cout << "Использование: calculator -o операция операнд1 операнд2 ..." << std::endl;
     std::cout << "Доступные операции:" << std::endl;
-    std::cout << "  -o summa: Вычисление суммы заданных операндов" << std::endl;
-    std::cout << "  -o vysota: Вычисление высоты баллистического полета" << std::endl;
-    std::cout << "  -o dalnost: Вычисление дальности баллистического полета" << std::endl;
+    std::cout << "  -summa: Вычисление суммы заданных операндов" << std::endl;
+    std::cout << "  -vysota: Вычисление высоты баллистического полета" << std::endl;
+    std::cout << "  -dalnost: Вычисление дальности баллистического полета" << std::endl;
 }
 
 double summa(const std::vector<double>& operandy) {
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
     
     std::string operation = argv[1];
     
-    if (operation == "-o summa") {
+    if (operation == "-summa") {
         std::vector<double> operandy;
         for (int i = 2; i < argc; i++) {
             double operand = std::stod(argv[i]);
@@ -48,13 +48,13 @@ int main(int argc, char* argv[]) {
         double result = summa(operandy);
         std::cout << "Сумма: " << result << std::endl;
     } 
-    else if (operation == "-o vysota") {
+    else if (operation == "-vysota") {
         double uhol = std::stod(argv[2]);
         double nach_skorost = std::stod(argv[3]);
         double result = vysota(uhol, nach_skorost);
         std::cout << "Высота: " << result << " м" << std::endl;
     } 
-    else if (operation == "-o dalnost") {
+    else if (operation == "-dalnost") {
         double uhol = std::stod(argv[2]);
         double nach_skorost = std::stod(argv[3]);
         double result = dalnost(uhol, nach_skorost);
