@@ -3,7 +3,7 @@
 #include <vector>
 
 void printUsage() {
-    std::cout << "Использование: calculator -o операция операнд1 операнд2 ..." << std::endl;
+    std::cout << "Использование: calculator -операция операнд1 операнд2 ..." << std::endl;
     std::cout << "Доступные операции:" << std::endl;
     std::cout << "  -summa: Вычисление суммы заданных операндов" << std::endl;
     std::cout << "  -vysota: Вычисление высоты баллистического полета" << std::endl;
